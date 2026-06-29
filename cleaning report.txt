@@ -1,0 +1,65 @@
+NETFLIX DATASET CLEANING REPORT
+Cleaning applied only according to the user's provided Python code.
+
+Input file: netflix_titles.csv
+1. Dataset shape
+   Rows before cleaning: 8807
+   Columns before cleaning: 12
+   Rows after cleaning: 8807
+   Columns after cleaning: 12
+
+2. Missing values before cleaning
+   show_id: 0
+   type: 0
+   title: 0
+   director: 2634
+   cast: 825
+   country: 831
+   date_added: 10
+   release_year: 0
+   rating: 4
+   duration: 3
+   listed_in: 0
+   description: 0
+
+3. Missing value handling
+   director: filled 2634 missing value(s) with 'Unknown'
+   cast: filled 825 missing value(s) with 'Unknown'
+   country: filled 831 missing value(s) with 'Unknown'
+   rating: filled 4 missing value(s) with 'Unknown'
+   duration: filled 3 missing value(s) with 'Unknown'
+   listed_in: filled 0 missing value(s) with 'Unknown'
+   description: filled 0 missing value(s) with 'Unknown'
+
+4. Duplicate handling
+   Duplicate rows found and removed: 0
+
+5. Text standardization
+   rating column converted to uppercase.
+   UNKNOWN was changed back to Unknown.
+   UNRATED was changed back to Unrated.
+
+6. Date conversion
+   date_added converted using pd.to_datetime(errors='coerce').
+   date_added formatted as dd-mm-yyyy.
+   Invalid or missing dates converted to blank: 98
+
+7. Data type conversion
+   show_id converted to pandas string datatype.
+
+8. Missing values after cleaning
+   show_id: 0
+   type: 0
+   title: 0
+   director: 0
+   cast: 0
+   country: 0
+   date_added: 0
+   release_year: 0
+   rating: 0
+   duration: 0
+   listed_in: 0
+   description: 0
+
+9. Final column names
+   show_id, type, title, director, cast, country, date_added, release_year, rating, duration, listed_in, description
